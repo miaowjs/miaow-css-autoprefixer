@@ -5,6 +5,11 @@ var postcss = require('postcss');
 var pkg = require('./package.json');
 
 module.exports = mutil.plugin(pkg.name, pkg.version, function (option, cb) {
+  var contents = this.contents;
+  if (!contents.length) {
+    return cb();
+  }
+
   postcss([autoprefixer]).process(this.contents).then(function (result) {
     this.contents = new Buffer(result.css);
     cb();
