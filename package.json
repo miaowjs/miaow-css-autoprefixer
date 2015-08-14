@@ -1,7 +1,7 @@
 {
   "name": "miaow-css-autoprefixer",
   "description": "Miaow的CSS自动前缀补全工具,只是对autoprefixer进行简单封装",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "repository": "miaowjs/miaow-css-autoprefixer",
   "author": {
     "name": "anhulife",
@@ -15,11 +15,11 @@
   ],
   "dependencies": {
     "autoprefixer-core": "~5.2.1",
-    "miaow-util": "~0.4.0",
+    "miaow-util": "~0.6.1",
     "postcss": "~4.1.11"
   },
   "devDependencies": {
-    "miaow": "^2.4.1",
+    "miaow": "^4.0.0",
     "mocha": "^2.2.4"
   },
   "scripts": {
