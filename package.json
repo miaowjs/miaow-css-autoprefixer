@@ -1,7 +1,7 @@
 {
   "name": "miaow-css-autoprefixer",
   "description": "Miaow的CSS自动前缀补全工具,只是对autoprefixer进行简单封装",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "repository": "miaowjs/miaow-css-autoprefixer",
   "author": {
     "name": "anhulife",
@@ -23,6 +23,7 @@
     "mocha": "^2.2.4"
   },
   "scripts": {
+    "postpublish": "cnpm sync miaow-css-autoprefixer",
     "test": "node ./node_modules/mocha/bin/mocha"
   },
   "engines": {
