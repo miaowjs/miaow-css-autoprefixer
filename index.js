@@ -10,7 +10,7 @@ module.exports = mutil.plugin(pkg.name, pkg.version, function (option, cb) {
     return cb();
   }
 
-  postcss([autoprefixer]).process(contents).then(function (result) {
+  postcss([autoprefixer(option)]).process(contents).then(function (result) {
     this.contents = new Buffer(result.css);
     cb();
   }.bind(this));
