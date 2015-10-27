@@ -1,17 +1,25 @@
-var autoprefixer = require('autoprefixer-core');
-var mutil = require('miaow-util');
+var autoprefixer = require('autoprefixer');
 var postcss = require('postcss');
 
 var pkg = require('./package.json');
 
-module.exports = mutil.plugin(pkg.name, pkg.version, function (option, cb) {
-  var contents = this.contents.toString();
+module.exports = function(options, callback) {
+  var context = this;
+  var contents = context.contents.toString();
   if (!contents.trim()) {
-    return cb();
+    return callback();
   }
 
-  postcss([autoprefixer]).process(contents).then(function (result) {
-    this.contents = new Buffer(result.css);
-    cb();
-  }.bind(this));
-});
+  try {
+    postcss([autoprefixer(options)]).process(contents).then(function(result) {
+      context.contents = new Buffer(result.css);
+      callback();
+    }, callback);
+  } catch (err) {
+    callback(err);
+  }
+};
+
+module.exports.toString = function() {
+  return [pkg.name, pkg.version].join('@');
+};

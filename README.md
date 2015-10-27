@@ -2,6 +2,8 @@
 
 > Miaow的CSS自动前缀补全工具,只是对[autoprefixer](https://github.com/postcss/autoprefixer)进行简单封装
 
+## 使用效果
+
 ```css
 :fullscreen a {
   display: flex
@@ -28,24 +30,6 @@
 }
 ```
 
-## 使用说明
+### 参数说明
 
-### 安装
-
-```
-npm install miaow-css-autoprefixer --save-dev
-```
-
-### 在项目的 miaow.config.js 中添加模块的 tasks 设置
-
-```javascript
-//miaow.config.js
-module: {
-  tasks: [
-    {
-      test: /\.css$/,
-      plugins: ['miaow-css-autoprefixer']
-    }
-  ]
-}
-```
+传入的所有参数都会直接传递给[autoprefixer](https://github.com/postcss/autoprefixer)
