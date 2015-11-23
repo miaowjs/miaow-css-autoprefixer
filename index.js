@@ -1,4 +1,4 @@
-var autoprefixer = require('autoprefixer');
+var autoprefixer = require('autoprefixer-core');
 var postcss = require('postcss');
 
 var pkg = require('./package.json');
