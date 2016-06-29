@@ -14,8 +14,8 @@
     "autoprefixer"
   ],
   "dependencies": {
-    "autoprefixer-core": "~5.2.1",
-    "postcss": "~4.1.16"
+    "autoprefixer-core": "5.2.1",
+    "postcss": "4.1.16"
   },
   "devDependencies": {
     "miaow": "^5.1.1",

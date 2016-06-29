@@ -29,6 +29,6 @@ describe('miaow-css-autoprefixer', function() {
   });
 
   it('自动补全', function() {
-    assert.equal(find(log.modules, {src: 'foo.css'}).destHash, '00d7d43d69dfc030a82e75bb762b6321');
+    assert.equal(find(log.modules, {src: 'foo.css'}).destHash, 'b9aeabd2e7308d0c9b28a6e1958c9090');
   });
 });
